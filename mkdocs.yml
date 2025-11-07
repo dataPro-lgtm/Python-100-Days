@@ -1,0 +1,53 @@
+site_name: Python - 100天从新手到大师（在线阅读）
+site_description: 将 GitHub 仓库直接包装为可搜索、可导航的在线书站
+site_url: https://<你的GitHub用户名>.github.io/Python-100-Days/
+repo_url: https://github.com/jackfrued/Python-100-Days
+repo_name: jackfrued/Python-100-Days
+
+# 关键：让 MkDocs 把“仓库根目录”当作文档目录使用，无需搬文件
+docs_dir: .
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.instant          # 无刷新切页
+    - navigation.top              # 顶部返回
+    - navigation.sections         # 侧边分节
+    - navigation.tracking         # TOC 跟踪
+    - content.code.copy           # 代码一键复制
+    - search.highlight
+    - search.suggest
+  palette:
+    - scheme: default
+
+plugins:
+  - search
+  - section-index                # 以每个目录中的 README.md 作为该节首页（如果存在）
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - attr_list
+
+# 可选：手工置顶首页与常用入口；其余页面让 MkDocs 自动收录和搜索
+nav:
+  - 首页（README）: README.md
+  - 学习资源汇总: Python学习资源汇总.md
+  - 更新日志: 更新日志.md
+  - Day01-20: Day01-20/
+  - Day21-30: Day21-30/
+  - Day31-35: Day31-35/
+  - Day36-45: Day36-45/
+  - Day46-60: Day46-60/
+  - Day61-65: Day61-65/
+  - Day66-80: Day66-80/
+  - Day81-90: Day81-90/
+  - Day91-100: Day91-100/
+  - 番外篇: 番外篇/
+  - 公开课: 公开课/
+  - res 资源: res/
